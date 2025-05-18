@@ -25,7 +25,7 @@ export default function UpperNav({ params }: { params: { uni: string } }) {
     useEffect(() => {
         async function fetchData() {
             try {
-                const res = await fetch("https://integrated-bambi-anmolworks-132395f3.koyeb.app/api/v1/getCollegeData");
+                const res = await fetch("https://api.anmolcreates.tech/api/v1/getCollegeData");
                 if (!res.ok) throw new Error("Failed to fetch data");
                 const json = await res.json();
                 setCurrentUniData(json.data[uni]);
